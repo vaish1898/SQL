@@ -1,14 +1,18 @@
+-- Use the coffee shop sales database
+USE coffee_shop_db;
+
 -- Step 1: Initial Data Inspection
-SELECT *
-FROM coffee_shop_sales
-LIMIT 10;
+-- Get the first 10 rows of the coffee shop sales table
+SELECT * FROM coffee_shop_sales LIMIT 10;
 
 -- Step 2: Check for Null Values
+-- Count the number of rows where weekly_sales is NULL
 SELECT COUNT(*) AS null_sales_count
 FROM coffee_shop_sales
 WHERE weekly_sales IS NULL;
 
 -- Step 3: Identify Weeks with Maximum Sales
+-- Find the weeks with the highest weekly sales
 SELECT MAX(weekly_sales) AS max_weekly_sales, 
        week_start_date
 FROM coffee_shop_sales
@@ -79,9 +83,9 @@ SELECT
 FROM coffee_shop_sales
 GROUP BY week_type;
 
--- Step 11: Identify Holidays with the Most Sales
+-- Step 11: Identify Holidays with the Most Sales (Promotional Weeks)
 SELECT week_start_date, promotion_flag, MAX(weekly_sales) AS highest_sales
 FROM coffee_shop_sales
-WHERE promotion_flag = true
+WHERE promotion_flag = TRUE
 GROUP BY week_start_date, promotion_flag
 ORDER BY highest_sales DESC;
