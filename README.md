@@ -1,14 +1,17 @@
-☕ Coffee Shop Sales Analysis – SQL Project
+**Coffee Shop Sales Analysis – SQL Project**
+
 This project provides a comprehensive SQL-based analysis of weekly sales data from multiple coffee shop locations. It demonstrates practical data exploration, aggregation, and business performance evaluation using MySQL.
 
-📂 Files Included
+**📂 Files Included**
+
 coffee_shop_sales_500_rows.xlsx – Synthetic dataset with 500 rows of weekly sales records.
 
 database_creation.sql – SQL script to create the coffee_shop_db database and the coffee_shop_sales table.
 
 coffee_shop_analysis.sql – SQL queries for business insights and growth analysis.
 
-📊 Dataset Overview
+**📊 Dataset Overview**
+
 The dataset includes:
 
 store_id: Unique store identifier
@@ -21,7 +24,8 @@ promotion_flag: Boolean flag for promotional campaigns
 
 customer_rating: Average customer rating (1.0 – 5.0)
 
-🔍 Analysis Performed
+**🔍 Analysis Performed**
+
 Data inspection and null value check
 
 Identification of weeks with highest sales
@@ -36,7 +40,8 @@ Impact of promotional vs. non-promotional weeks
 
 Holiday sales analysis based on promotions
 
-💡 Key Learnings
+**💡 Key Learnings**
+
 Writing efficient SQL queries using GROUP BY, CASE, WITH, and JOIN
 
 Using views for performance metrics (store growth)
